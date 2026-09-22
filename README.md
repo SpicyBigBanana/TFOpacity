@@ -160,32 +160,6 @@ TFOpacity/
 
 ---
 
-## 上传到 Git
-
-建议：
-
-1. 只提交源码、脚本、`README.md`、`.gitignore`。  
-2. **不要**提交 `dist/`、`build/`、`.app`、`.zip`、`.dmg`。  
-3. 把 `TFOpacity.zip` / `TFOpacity.dmg` 挂到 GitHub / Gitee **Release** 附件。
-
-示例：
-
-```bash
-cd ~/Documents/TFOpacity
-git init
-git add App Sources scripts README.md .gitignore
-git commit -m "Initial commit: TFOpacity 1.0.0"
-# 绑定远程仓库后
-git push -u origin main
-
-# 发版时上传安装包
-gh release create v1.0.0 dist/TFOpacity.zip dist/TFOpacity.dmg \
-  --title "TFOpacity 1.0.0" \
-  --notes "单窗口透明度面板。需配合 yabai 与部分关闭 SIP。"
-```
-
----
-
 ## 已知限制
 
 - 仅 Apple Silicon 构建产物可直接运行；Intel 需在对应机器上重新 `./scripts/build.sh`。  
